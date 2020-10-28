@@ -29,14 +29,14 @@ object accumulator01_system {
 
     //3.2 如果不用shuffle，怎么处理呢？
 //    var sum = 0
-    // 打印是在Executor端
+////     打印是在Executor端
 //    dataRDD.foreach {
 //      case (a, count) => {
 //        sum = sum + count
 //        println("sum=" + sum)
 //      }
 //    }
-    // 打印是在Driver端
+////     打印是在Driver端
 //    println(("a", sum))
 
     val sum: LongAccumulator = sc.longAccumulator("sum")
