@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8e31bbf2-2ea4-4cd9-b469-c217d7cc43d8" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1eeeYDROUt0Ww1C2nRgFvhBjOb9" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RunManager" selected="JUnit.MaxSubString.test01">
+    <configuration name="MaxSubString.test01" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="StringProj" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="stringexe.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="stringexe" />
+      <option name="MAIN_CLASS_NAME" value="stringexe.MaxSubString" />
+      <option name="METHOD_NAME" value="test01" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MaxSubString.test02" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="StringProj" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="stringexe.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="stringexe" />
+      <option name="MAIN_CLASS_NAME" value="stringexe.MaxSubString" />
+      <option name="METHOD_NAME" value="test02" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SimulateTrim.Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="StringProj" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="stringexe.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="stringexe" />
+      <option name="MAIN_CLASS_NAME" value="stringexe.SimulateTrim" />
+      <option name="METHOD_NAME" value="Test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StringReverse.test01" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="StringProj" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="stringexe.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="stringexe" />
+      <option name="MAIN_CLASS_NAME" value="stringexe.StringReverse" />
+      <option name="METHOD_NAME" value="test01" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SubStringTimes.exer2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="StringProj" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="stringexe.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="stringexe" />
+      <option name="MAIN_CLASS_NAME" value="stringexe.SubStringTimes" />
+      <option name="METHOD_NAME" value="exer2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.MaxSubString.test02" />
+        <item itemvalue="JUnit.MaxSubString.test01" />
+        <item itemvalue="JUnit.SimulateTrim.Test" />
+        <item itemvalue="JUnit.SubStringTimes.exer2" />
+        <item itemvalue="JUnit.StringReverse.test01" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8e31bbf2-2ea4-4cd9-b469-c217d7cc43d8" name="Default Changelist" comment="" />
+      <created>1594686530493</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1594686530493</updated>
+      <workItem from="1594686533874" duration="18799000" />
+      <workItem from="1594725439717" duration="15823000" />
+      <workItem from="1594886870791" duration="9139000" />
+      <workItem from="1594907881265" duration="11000" />
+      <workItem from="1595511678940" duration="100000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="434" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1594898021314">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="434" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1594898021314" />
+    <state x="634" y="263" key="FileChooserDialogImpl" timestamp="1594690602367">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="634" y="263" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1594690602367" />
+    <state width="1493" height="276" key="GridCell.Tab.0.bottom" timestamp="1594907843157">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="276" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1594907843157" />
+    <state width="1877" height="276" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1594888632891" />
+    <state width="1493" height="276" key="GridCell.Tab.0.center" timestamp="1594907843157">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="276" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1594907843157" />
+    <state width="1877" height="276" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1594888632891" />
+    <state width="1493" height="276" key="GridCell.Tab.0.left" timestamp="1594907843157">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="276" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1594907843157" />
+    <state width="1877" height="276" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1594888632891" />
+    <state width="1493" height="276" key="GridCell.Tab.0.right" timestamp="1594907843157">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="276" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1594907843157" />
+    <state width="1877" height="276" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1594888632891" />
+    <state x="352" y="0" key="SettingsEditor" timestamp="1594907810849">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="352" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1594907810849" />
+    <state x="440" y="97" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1594690604595" />
+    <state x="658" y="420" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1594690586687">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="658" y="420" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1920.1040@0.0.1920.1040" timestamp="1594690586687" />
+    <state x="334" y="135" key="new project wizard" timestamp="1594779524022">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="334" y="135" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1594779524022" />
+  </component>
+</project>

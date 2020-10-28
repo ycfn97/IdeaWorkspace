@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="be4986e4-5659-4725-bc46-ebf059a501cd" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin File" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1f8A30F67Ln0N6E37oHLMiBEM54" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../MavenProj" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\IdeaWorkspace\JavaSETestProj" />
+      <recent name="E:\IdeaWorkspace\JavaSETestProj\src\easy" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\IdeaWorkspace\JavaSETestProj\src" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.exe18">
+    <configuration name="exe18" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="base.exe18" />
+      <module name="JavaSETestProj" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="base.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="exe19" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="base.exe19" />
+      <module name="JavaSETestProj" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="base.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="exe20" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="base.exe20" />
+      <module name="JavaSETestProj" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="base.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="exe21" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="base.exe21" />
+      <module name="JavaSETestProj" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="base.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="exe22" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="base.exe22" />
+      <module name="JavaSETestProj" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="base.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.exe18" />
+        <item itemvalue="Application.exe19" />
+        <item itemvalue="Application.exe20" />
+        <item itemvalue="Application.exe21" />
+        <item itemvalue="Application.exe22" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="be4986e4-5659-4725-bc46-ebf059a501cd" name="Default Changelist" comment="" />
+      <created>1595589142436</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1595589142436</updated>
+      <workItem from="1595589144694" duration="14867000" />
+      <workItem from="1595831156798" duration="28000" />
+      <workItem from="1595855898864" duration="6493000" />
+      <workItem from="1595895561797" duration="1383000" />
+      <workItem from="1595937509889" duration="10235000" />
+      <workItem from="1596027912693" duration="4615000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="765" y="226" key="#com.intellij.ide.util.MemberChooser" timestamp="1595941479954">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="765" y="226" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1595941479954" />
+    <state x="592" y="219" key="FileChooserDialogImpl" timestamp="1596107566490">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="592" y="219" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1596107566490" />
+    <state x="740" y="277" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1595898668199" />
+    <state width="1493" height="164" key="GridCell.Tab.0.bottom" timestamp="1596107567585">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="164" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1596107567585" />
+    <state width="1877" height="305" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1596028096604" />
+    <state width="1493" height="164" key="GridCell.Tab.0.center" timestamp="1596107567585">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="164" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1596107567585" />
+    <state width="1877" height="305" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1596028096603" />
+    <state width="1493" height="164" key="GridCell.Tab.0.left" timestamp="1596107567585">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="164" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1596107567585" />
+    <state width="1877" height="305" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1596028096603" />
+    <state width="1493" height="164" key="GridCell.Tab.0.right" timestamp="1596107567585">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="164" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1596107567585" />
+    <state width="1877" height="305" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1596028096604" />
+    <state width="1877" height="388" key="GridCell.Tab.1.bottom" timestamp="1595595190576">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="388" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1595595190576" />
+    <state width="1877" height="388" key="GridCell.Tab.1.center" timestamp="1595595190576">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="388" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1595595190576" />
+    <state width="1877" height="388" key="GridCell.Tab.1.left" timestamp="1595595190576">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="388" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1595595190576" />
+    <state width="1877" height="388" key="GridCell.Tab.1.right" timestamp="1595595190576">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="388" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1595595190576" />
+    <state x="217" y="330" key="com.intellij.ide.util.TipDialog" timestamp="1595831158433">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="217" y="330" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1595831158433" />
+    <state x="485" y="313" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1595605679661">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="485" y="313" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1536.824@0.0.1536.824" timestamp="1595605679661" />
+    <state x="334" y="135" key="new project wizard" timestamp="1595831187366">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="334" y="135" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1595831187366" />
+    <state x="498" y="178" width="672" height="538" key="search.everywhere.popup" timestamp="1595609883918">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="498" y="178" width="672" height="538" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1595609883918" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1595589554010" />
+  </component>
+</project>

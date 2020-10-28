@@ -1,0 +1,3 @@
+com\atguigu\hive\udtf\ExplodeJSONArray.class
+com\atguigu\hive\udtf\JsonArrayToStructArray.class
+com\atguigu\hive\udtf\MyLength.class

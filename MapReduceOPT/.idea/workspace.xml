@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f2175bf9-ef57-40fd-aa30-c3ec4e0409ab" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="C:/maven/apache-maven-3.6.3-bin/apache-maven-3.6.3" />
+        <option name="userSettingsFile" value="C:\maven\apache-maven-3.6.3-bin\apache-maven-3.6.3\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+        <option name="jdkForImporter" value="14" />
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenRunner">
+    <option name="jreName" value="14" />
+  </component>
+  <component name="ProjectId" id="1g56ro3yyqfAjFMQDHy8NurdN3s" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../JDBCProj" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.runner" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\IdeaWorkspace\MapReduceOPT\src\main\resources" />
+      <recent name="E:\IdeaWorkspace\MapReduceOPT\src\main\java\mycompress" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.WordcountDriver">
+    <configuration name="Compress" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="mycompress.Compress" />
+      <module name="MapReduceOPT" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="mycompress.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DeCompress" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="mycompress.DeCompress" />
+      <module name="MapReduceOPT" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="mycompress.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestCompress" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="mycompress.TestCompress" />
+      <module name="MapReduceOPT" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="mycompress.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WordcountDriver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="mymapreducecompress.WordcountDriver" />
+      <module name="MapReduceOPT" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="mymapreducecompress.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ZkClient.testDeleteAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ZookeeperDemo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="zk.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="zk" />
+      <option name="MAIN_CLASS_NAME" value="zk.ZkClient" />
+      <option name="METHOD_NAME" value="testDeleteAll" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.WordcountDriver" />
+        <item itemvalue="Application.DeCompress" />
+        <item itemvalue="Application.Compress" />
+        <item itemvalue="Application.TestCompress" />
+        <item itemvalue="JUnit.ZkClient.testDeleteAll" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\18729\AppData\Roaming\Subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f2175bf9-ef57-40fd-aa30-c3ec4e0409ab" name="Default Changelist" comment="" />
+      <created>1597392307273</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1597392307273</updated>
+      <workItem from="1597392313402" duration="21277000" />
+      <workItem from="1597575903643" duration="49000" />
+      <workItem from="1597576156352" duration="4445000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="592" y="219" key="FileChooserDialogImpl" timestamp="1597596957951">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="592" y="219" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1597596957951" />
+    <state x="740" y="277" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1597399490789" />
+    <state width="1493" height="195" key="GridCell.Tab.0.bottom" timestamp="1597583832675">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="195" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1597583832675" />
+    <state width="1877" height="372" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1597477006147" />
+    <state width="1493" height="195" key="GridCell.Tab.0.center" timestamp="1597583832675">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="195" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1597583832675" />
+    <state width="1877" height="372" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1597477006146" />
+    <state width="1493" height="195" key="GridCell.Tab.0.left" timestamp="1597583832675">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="195" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1597583832675" />
+    <state width="1877" height="372" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1597477006146" />
+    <state width="1493" height="195" key="GridCell.Tab.0.right" timestamp="1597583832675">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="195" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1597583832675" />
+    <state width="1877" height="372" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1597477006147" />
+    <state x="540" y="257" key="IDE.errors.dialog" timestamp="1597474732335">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="540" y="257" key="IDE.errors.dialog/0.0.1920.1040@0.0.1920.1040" timestamp="1597474732335" />
+    <state x="490" y="177" key="Maven.ArtifactSearchDialog" timestamp="1597398485550">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="490" y="177" key="Maven.ArtifactSearchDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1597398485550" />
+    <state x="461" y="239" key="com.intellij.ide.util.TipDialog" timestamp="1597576155469">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="461" y="239" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1597576155469" />
+    <state x="30" y="208" key="new project wizard" timestamp="1597471493625">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="30" y="208" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1597471493625" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1597473028834">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1597473028834" />
+  </component>
+</project>

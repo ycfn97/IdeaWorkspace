@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f33499c3-68ee-4424-aac9-4459f47f767a" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="C:/maven/apache-maven-3.6.3-bin/apache-maven-3.6.3" />
+        <option name="userSettingsFile" value="C:\maven\apache-maven-3.6.3-bin\apache-maven-3.6.3\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+        <option name="jdkForImporter" value="#JAVA_HOME" />
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenRunner">
+    <option name="delegateBuildToMaven" value="true" />
+    <option name="jreName" value="#JAVA_HOME" />
+  </component>
+  <component name="ProjectId" id="1gkeydWrPCK0VKzXzQ1NwA06UBV" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../FlumeDemo" />
+    <property name="settings.editor.selected.configurable" value="experimental" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="my.interceptor" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\IdeaWorkspace\KafkaDemo\src\main\java" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Producer02 (1)">
+    <configuration name="Consumer01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="my.consumer.Consumer01" />
+      <module name="KafkaDemo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="my.consumer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Consumer02" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="my.consumer.Consumer02" />
+      <module name="KafkaDemo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="my.consumer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Producer02 (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="my.interceptor.Producer02" />
+      <module name="KafkaDemo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="my.interceptor.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Producer02" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="my.producer.Producer02" />
+      <module name="KafkaDemo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="my.producer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Producer02 (1)" />
+        <item itemvalue="Application.Consumer02" />
+        <item itemvalue="Application.Producer02" />
+        <item itemvalue="Application.Consumer01" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\18729\AppData\Roaming\Subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f33499c3-68ee-4424-aac9-4459f47f767a" name="Default Changelist" comment="" />
+      <created>1598663272456</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1598663272456</updated>
+      <workItem from="1598663276672" duration="143000" />
+      <workItem from="1598665779384" duration="1779000" />
+      <workItem from="1598774064737" duration="13425000" />
+      <workItem from="1598861953911" duration="18991000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="718" y="151" key="#com.intellij.ide.util.MemberChooser" timestamp="1598922266878">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="574" y="120" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1598795028139" />
+    <state x="718" y="151" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1598922266878" />
+    <state x="686" y="215" key="FileChooserDialogImpl" timestamp="1599199873978">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="549" y="170" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1598788152744" />
+    <state x="686" y="215" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1599199873978" />
+    <state width="1877" height="238" key="GridCell.Tab.0.bottom" timestamp="1599199879392">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1493" height="432" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1598809883941" />
+    <state width="1877" height="238" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1599199879392" />
+    <state width="1877" height="238" key="GridCell.Tab.0.center" timestamp="1599199879391">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1493" height="432" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1598809883940" />
+    <state width="1877" height="238" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1599199879391" />
+    <state width="1877" height="238" key="GridCell.Tab.0.left" timestamp="1599199879390">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1493" height="432" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1598809883940" />
+    <state width="1877" height="238" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1599199879390" />
+    <state width="1877" height="238" key="GridCell.Tab.0.right" timestamp="1599199879392">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1493" height="432" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1598809883941" />
+    <state width="1877" height="238" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1599199879392" />
+    <state x="681" y="261" width="540" height="524" key="StructurePopup" timestamp="1598930291124">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="681" y="261" width="540" height="524" key="StructurePopup/0.0.1920.1040@0.0.1920.1040" timestamp="1598930291124" />
+    <state x="334" y="223" key="new project wizard" timestamp="1598856858510">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="334" y="223" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1598856858510" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1598930276161">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1598930276161" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1598930297142">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1598930297142" />
+  </component>
+</project>
