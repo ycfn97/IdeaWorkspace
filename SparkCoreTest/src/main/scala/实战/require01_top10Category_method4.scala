@@ -1,7 +1,6 @@
 package 实战
 
 import org.apache.spark.{SparkConf, SparkContext}
-
 import scala.collection.mutable.ListBuffer
 
 /**
@@ -70,15 +69,19 @@ object require01_top10Category_method4 {
           info1.orderCount = info1.orderCount + info2.orderCount
           info1.clickCount = info1.clickCount + info2.clickCount
           info1.payCount = info1.payCount + info2.payCount
-
           info1
         }
-      ).map(_._2)
-      .sortBy(a=>(a.clickCount,a.orderCount,a.payCount),true)
-      .take(10).foreach(println)
-    Thread.sleep(1000000000)
+      )
+      .collect().foreach(println)
+    //          .map(_._2)
+    //      .sortBy(a=>(a.clickCount,a.orderCount,a.payCount),true)
+    //      .take(10).foreach(println)
+    //    Thread.sleep(1000000000)
     //4.关闭连接
     sc.stop()
+
+    //    sc.textFile("").map(_).flatMap(_).reduceByKey().map(_._2).sortBy().take(10).foreach(println)
+
   }
 }
 

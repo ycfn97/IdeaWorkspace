@@ -28,7 +28,8 @@ object value07_wordcount02 {
 
     value.flatMap(_.split(" ")).map((_,1)).groupBy(_._1).map(a=>(a._1,a._2.size)).collect().foreach(println)
 
-    //4.关闭连接
+    value.flatMap(_.split(" ")).map((_,1)).reduceByKey(_+_).collect().foreach(println)
+
     sc.stop()
   }
 }

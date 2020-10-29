@@ -41,6 +41,7 @@ object require01_top10Category_method3 {
           datas(12).toLong
         )
       })
+//      .collect().foreach(println)
       .flatMap(a=>(
         if (a.click_category_id != -1){
           List(CategoryCountInfo(a.click_category_id.toString,1,0,0))
@@ -64,22 +65,28 @@ object require01_top10Category_method3 {
       ))
       .groupBy(info=>info.categoryId)
       .mapValues(a=>a.reduce(
-        (a,b)=>{
-          a.orderCount=a.orderCount+b.orderCount
-          a.clickCount=a.clickCount+b.clickCount
-          a.payCount=a.payCount+b.payCount
-          a
-        }
-      ))
-      .map(_._2)
-      .sortBy(a=>(a.clickCount,a.orderCount,a.payCount),false)
-      .take(10).foreach(println)
+          (a,b)=>{
+            a.orderCount=a.orderCount+b.orderCount
+            a.clickCount=a.clickCount+b.clickCount
+            a.payCount=a.payCount+b.payCount
+            a
+          }
+          ))
+          .map(_._2)
+          .sortBy(a=>(a.clickCount,a.orderCount,a.payCount),false)
+      .collect().foreach(println)
+    //      .take(10).foreach(println)
 
-    Thread.sleep(1000000)
+//    Thread.sleep(1000000)
     //4.关闭连接
     sc.stop()
+
+//    sc.textFile("").map(_).flatMap(_).groupBy(_).mapValues(_).map(_._2).sortBy(_).collect().foreach(println)
+//    1，获取对象，2，扁平化获得品类次数信息，3，按照城市id聚合，4，对聚合后的value相加，5，取第二个参数，6，排序并取前十
   }
 }
+
+
 
 //用户访问动作表
 case class UserVisitAction(date: String,//用户点击行为的日期

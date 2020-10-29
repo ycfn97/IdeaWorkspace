@@ -80,41 +80,43 @@ object require02_top10Category_sessionTop10 {
       .sortBy(a => (a.clickCount, a.orderCount, a.payCount), true)
       .take(10)
       .map(_.categoryId)
+    //          strings.foreach(println)
 
     /**
      * =======================================需求二=================================================
      */
 
     val value: Broadcast[Array[String]] = sc.broadcast(strings)
-    value1.filter{
-      a=>{
-        if (a.click_category_id!= -1){
+    value1.filter {
+      a => {
+        if (a.click_category_id != -1) {
           value.value.contains(a.click_category_id.toString)
-        }else{
+        } else {
           false
         }
       }
     }
-      .map{
-        a=>(a.click_category_id+"--"+a.city_id,1)
+      .map {
+        a => (a.click_category_id + "--" + a.city_id, 1)
       }
-      .reduceByKey(_+_)
-      .map{
-        case(key,sum)=>{
+      .reduceByKey(_ + _)
+      .map {
+        case (key, sum) => {
           val strings1: Array[String] = key.split("--")
-          ((strings1(0),(strings1(1),sum)))
+          ((strings1(0), (strings1(1), sum)))
         }
       }
       .groupByKey()
       .mapValues(
-        a=>{
-          a.toList.sortWith{
-            (a,b)=>(a._2>b._2)
+        a => {
+          a.toList.sortWith {
+            (a, b) => (a._2 > b._2)
           }.take(10)
         }
       )
       .foreach(println)
-    Thread.sleep(1000000000)
+    //      .foreach(println)
+    //    Thread.sleep(1000000000)
     //4.关闭连接
     sc.stop()
   }
