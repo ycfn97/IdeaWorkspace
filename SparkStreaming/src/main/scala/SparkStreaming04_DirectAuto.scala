@@ -1,6 +1,6 @@
 import org.apache.kafka.clients.consumer.{ConsumerConfig, ConsumerRecord}
 import org.apache.kafka.common.serialization.StringDeserializer
-import org.apache.spark.SparkConf
+import org.apache.spark.{SPARK_BRANCH, SparkConf}
 import org.apache.spark.streaming.dstream.{DStream, InputDStream}
 import org.apache.spark.streaming.kafka010.{ConsumerStrategies, KafkaUtils, LocationStrategies}
 import org.apache.spark.streaming.{Seconds, StreamingContext}
@@ -33,14 +33,20 @@ object SparkStreaming04_DirectAuto {
     )
 
     //4.读取Kafka数据创建DStream
-    val kafkaDStream: InputDStream[ConsumerRecord[String, String]] = KafkaUtils.createDirectStream[String, String](
+//    val kafkaDStream: InputDStream[ConsumerRecord[String, String]] = KafkaUtils.createDirectStream[String, String](
+//      ssc,
+//      LocationStrategies.PreferConsistent, //优先位置
+//      ConsumerStrategies.Subscribe[String, String](Set("testTopic"), kafkaPara)// 消费策略：（订阅多个主题，配置参数）
+//    )
+
+    val value: InputDStream[ConsumerRecord[String, String]] = KafkaUtils.createDirectStream[String, String](
       ssc,
-      LocationStrategies.PreferConsistent, //优先位置
-      ConsumerStrategies.Subscribe[String, String](Set("testTopic"), kafkaPara)// 消费策略：（订阅多个主题，配置参数）
+      LocationStrategies.PreferConsistent,
+      ConsumerStrategies.Subscribe[String, String](Set("spark_streaming_topic"), kafkaPara)
     )
 
     //5.将每条消息的KV取出
-    val valueDStream: DStream[String] = kafkaDStream.map(record => record.value())
+    val valueDStream: DStream[String] = value.map(record => record.value())
 
     //6.计算WordCount
     valueDStream.flatMap(_.split(" "))

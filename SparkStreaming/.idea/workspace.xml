@@ -23,8 +23,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dc610adc-01a1-4e84-a49f-d23c92864ef8" name="Default Changelist" comment="third commit">
-      <change afterPath="$PROJECT_DIR$/../hivefunction/src/main/java/com/atguigu/hive/udtf/ExplodeJSONArray01.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/DStream/SparkStreaming07_window.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/DStream/sparkStreaming06_updateStateByKey.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/SparkStreaming05_Transform.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/SparkStreaming04_DirectAuto.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/SparkStreaming04_DirectAuto.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SparkStreaming04_DirectAuto$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SparkStreaming04_DirectAuto$.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../log/agent.log" beforeDir="false" afterPath="$PROJECT_DIR$/../log/agent.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +39,13 @@
   </component>
   <component name="CodeStyleSettingsInfer">
     <option name="done" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Scala Object" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -71,21 +84,7 @@
     <property name="project.structure.side.proportion" value="0.24022989" />
     <property name="settings.editor.selected.configurable" value="editing.templates" />
   </component>
-  <component name="RunManager" selected="Application.SparkStreaming04_DirectAuto">
-    <configuration name="Spark01_WordCount" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="Spark01_WordCount" />
-      <module name="SparkStreaming" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Spark02_DStreamCreate_RDDQueue" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="Spark02_DStreamCreate_RDDQueue" />
-      <module name="SparkStreaming" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.SparkStreaming07_window">
     <configuration name="SparkStreaming03_CustomerReceiver" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="SparkStreaming03_CustomerReceiver" />
       <module name="SparkStreaming" />
@@ -100,25 +99,51 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration name="SparkStreaming05_Transform" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="SparkStreaming05_Transform" />
+      <module name="SparkStreaming" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SparkStreaming07_window" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="DStream.SparkStreaming07_window" />
+      <module name="SparkStreaming" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="DStream.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="sparkStreaming06_updateStateByKey" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="DStream.sparkStreaming06_updateStateByKey" />
+      <module name="SparkStreaming" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.SparkStreaming07_window" />
+        <item itemvalue="Application.sparkStreaming06_updateStateByKey" />
+        <item itemvalue="Application.SparkStreaming05_Transform" />
         <item itemvalue="Application.SparkStreaming04_DirectAuto" />
         <item itemvalue="Application.SparkStreaming03_CustomerReceiver" />
-        <item itemvalue="Application.Spark02_DStreamCreate_RDDQueue" />
-        <item itemvalue="Application.Spark01_WordCount" />
       </list>
     </recent_temporary>
   </component>
@@ -137,7 +162,8 @@
       <workItem from="1604063724035" duration="17000" />
       <workItem from="1604063778426" duration="29000" />
       <workItem from="1604063833021" duration="12270000" />
-      <workItem from="1604121650921" duration="1961000" />
+      <workItem from="1604121650921" duration="4356000" />
+      <workItem from="1604128769293" duration="2028000" />
     </task>
     <task id="LOCAL-00001" summary="third commit">
       <created>1604112191158</created>
@@ -192,26 +218,26 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="719" y="204" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1604110624873" />
-    <state width="1877" height="355" key="GridCell.Tab.0.bottom" timestamp="1604123744818">
+    <state width="1877" height="355" key="GridCell.Tab.0.bottom" timestamp="1604130937024">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="355" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604123744818" />
-    <state width="1877" height="355" key="GridCell.Tab.0.center" timestamp="1604123744817">
+    <state width="1877" height="355" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604130937024" />
+    <state width="1877" height="355" key="GridCell.Tab.0.center" timestamp="1604130937024">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="355" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604123744817" />
-    <state width="1877" height="355" key="GridCell.Tab.0.left" timestamp="1604123744817">
+    <state width="1877" height="355" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604130937024" />
+    <state width="1877" height="355" key="GridCell.Tab.0.left" timestamp="1604130937023">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="355" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604123744817" />
-    <state width="1877" height="355" key="GridCell.Tab.0.right" timestamp="1604123744818">
+    <state width="1877" height="355" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604130937023" />
+    <state width="1877" height="355" key="GridCell.Tab.0.right" timestamp="1604130937024">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="355" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604123744818" />
-    <state x="440" y="94" key="SettingsEditor" timestamp="1604117014171">
+    <state width="1877" height="355" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604130937024" />
+    <state x="440" y="94" key="SettingsEditor" timestamp="1604126693609">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="440" y="94" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1604117014171" />
+    <state x="440" y="94" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1604126693609" />
     <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1604122407771">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
