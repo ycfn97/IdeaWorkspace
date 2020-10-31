@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:IdeaWorkspace" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="dc610adc-01a1-4e84-a49f-d23c92864ef8" name="Default Changelist" comment="third commit">
+      <change afterPath="$PROJECT_DIR$/src/main/scala/CustomerReceiver.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/SparkStreaming03_CustomerReceiver.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/SparkStreaming04_DirectAuto.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/MyReceiver.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/MyReceiver.class" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="C:\Users\18729\.m2\repository" />
+        <option name="mavenHome" value="C:\maven\apache-maven-3.6.3-bin\apache-maven-3.6.3" />
+        <option name="userSettingsFile" value="C:\maven\apache-maven-3.6.3-bin\apache-maven-3.6.3\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="jdkForImporter" value="#JAVA_HOME" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectId" id="1jbAOxqTOWWsPCIDF5tXSsdk8t7" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Problems" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.24022989" />
+    <property name="settings.editor.selected.configurable" value="editing.templates" />
+  </component>
+  <component name="RunManager" selected="Application.SparkStreaming04_DirectAuto">
+    <configuration name="Spark01_WordCount" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="Spark01_WordCount" />
+      <module name="SparkStreaming" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Spark02_DStreamCreate_RDDQueue" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="Spark02_DStreamCreate_RDDQueue" />
+      <module name="SparkStreaming" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SparkStreaming03_CustomerReceiver" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="SparkStreaming03_CustomerReceiver" />
+      <module name="SparkStreaming" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SparkStreaming04_DirectAuto" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="SparkStreaming04_DirectAuto" />
+      <module name="SparkStreaming" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.SparkStreaming04_DirectAuto" />
+        <item itemvalue="Application.SparkStreaming03_CustomerReceiver" />
+        <item itemvalue="Application.Spark02_DStreamCreate_RDDQueue" />
+        <item itemvalue="Application.Spark01_WordCount" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="dc610adc-01a1-4e84-a49f-d23c92864ef8" name="Default Changelist" comment="" />
+      <created>1604062392653</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1604062392653</updated>
+      <workItem from="1604062400155" duration="246000" />
+      <workItem from="1604062742400" duration="240000" />
+      <workItem from="1604063505757" duration="61000" />
+      <workItem from="1604063603676" duration="22000" />
+      <workItem from="1604063724035" duration="17000" />
+      <workItem from="1604063778426" duration="29000" />
+      <workItem from="1604063833021" duration="12270000" />
+      <workItem from="1604121650921" duration="625000" />
+    </task>
+    <task id="LOCAL-00001" summary="third commit">
+      <created>1604112191158</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1604112191158</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="third commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="third commit" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="710" y="0" key="#Auto_Import" timestamp="1604115306691">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="710" y="0" key="#Auto_Import/0.0.1920.1040@0.0.1920.1040" timestamp="1604115306691" />
+    <state x="765" y="211" key="#com.intellij.ide.util.MemberChooser" timestamp="1604116442347">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="765" y="211" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1604116442347" />
+    <state x="577" y="197" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1604062508357">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="577" y="197" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1604062508357" />
+    <state x="719" y="204" key="FileChooserDialogImpl" timestamp="1604110624873">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="719" y="204" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1604110624873" />
+    <state width="1877" height="161" key="GridCell.Tab.0.bottom" timestamp="1604121604187">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="161" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604121604187" />
+    <state width="1877" height="161" key="GridCell.Tab.0.center" timestamp="1604121604187">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="161" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604121604187" />
+    <state width="1877" height="161" key="GridCell.Tab.0.left" timestamp="1604121604186">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="161" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604121604186" />
+    <state width="1877" height="161" key="GridCell.Tab.0.right" timestamp="1604121604187">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="161" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604121604187" />
+    <state x="440" y="94" key="SettingsEditor" timestamp="1604117014171">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="440" y="94" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1604117014171" />
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1604112203594">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1604112203594" />
+  </component>
+</project>
