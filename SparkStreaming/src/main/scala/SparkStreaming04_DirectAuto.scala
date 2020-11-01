@@ -57,6 +57,5 @@ object SparkStreaming04_DirectAuto {
     //7.开启任务
     ssc.start()
     ssc.awaitTermination()
-
   }
 }

@@ -1,7 +1,7 @@
 package DStream
 
-import org.apache.spark.SparkConf
-import org.apache.spark.streaming.dstream.ReceiverInputDStream
+import org.apache.spark.{HashPartitioner, SparkConf}
+import org.apache.spark.streaming.dstream.{DStream, ReceiverInputDStream}
 import org.apache.spark.streaming.{Seconds, StreamingContext}
 
 /**
@@ -23,8 +23,36 @@ object SparkStreaming08_reduceByKeyAndWindow {
 
     val value: ReceiverInputDStream[String] = ssc.socketTextStream("hadoop01", 9999)
 
+    val value1: DStream[(String, Int)] = value.flatMap(_.split(" ")).map((_, 1))
+    //    .reduceByKeyAndWindow((a:Int,b:Int)=>(a+b),Seconds(12),Seconds(3)).print()
 
-    //启动采集器
+    // 4 窗口参数说明： 算法逻辑，窗口12秒，滑步6秒
+    /*
+    val wordToSumDStream: DStream[(String, Int)]= wordToOne.reduceByKeyAndWindow(
+        (x: Int, y: Int) => (x + y),
+        (x: Int, y: Int) => (x - y),
+        Seconds(12),
+        Seconds(6)
+    )*/
+
+    // 保存数据到检查点
+    ssc.checkpoint("./ck")
+
+
+    // 处理单词统计次数为0的问题
+    val wordToSumDStream: DStream[(String, Int)]= value1.reduceByKeyAndWindow(
+      (x: Int, y: Int) => (x + y),
+      (x: Int, y: Int) => (x - y),
+      Seconds(12),
+      Seconds(4),
+      new HashPartitioner(2),
+      (x:(String, Int)) => x._2 > 0
+    )
+
+    // 5 打印
+    wordToSumDStream.print()
+
+//    启动采集器
     ssc.start()
     //默认情况下，上下文对象不能关闭
     //ssc.stop()
