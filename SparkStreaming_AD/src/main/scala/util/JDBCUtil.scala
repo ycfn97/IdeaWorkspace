@@ -24,7 +24,7 @@ object JDBCUtil {
   def init(): DataSource = {
     val properties = new Properties()
     val config: Properties = PropertiesUtil.load("config.properties")
-    properties.setProperty("driverClassName", "com.mysql.jdbc.Driver")
+    properties.setProperty("driverClassName", "com.mysql.cj.jdbc.Driver")
     properties.setProperty("url", config.getProperty("jdbc.url"))
     properties.setProperty("username", config.getProperty("jdbc.user"))
     properties.setProperty("password", config.getProperty("jdbc.password"))

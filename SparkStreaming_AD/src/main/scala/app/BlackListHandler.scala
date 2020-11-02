@@ -1,8 +1,7 @@
 package app
 
-import java.sql.Connection
+import java.sql.{Connection, Date}
 import java.text.SimpleDateFormat
-import org.apache.avro.LogicalTypes.Date
 import org.apache.spark.streaming.dstream.DStream
 import util.JDBCUtil
 /**
@@ -29,6 +28,52 @@ object BlackListHandler {
         ((date, adsLog.userid, adsLog.adid), 1L)
       }
     ).reduceByKey(_ + _)
+
+
+    filterAdsLogDSteam.map(
+      a=>{
+        val str: String = sdf.format(new Date(a.timestamp))
+        ((str,a.userid,a.adid),1L)
+      }
+    ).reduceByKey(_+_).foreachRDD(
+      a=>{
+        a.foreachPartition(
+          a=>{
+            val connection: Connection = JDBCUtil.getConnection
+            a.foreach {
+              case ((dt, user, ad), count) => {
+                JDBCUtil.executeUpdate(
+                  connection,
+                  """
+                    |insert into user_ad_count(dt,userid,adid,count) values(?,?,?,?) on duplicate key update count=count+?
+                    |""".stripMargin,
+                  Array(dt,user,ad,count,count)
+                )
+                val l: Long = JDBCUtil.getDataFromMysql(
+                  connection,
+                  """
+                    |select count from user_ad_count where dt=? and userid=? and adid=?
+                    |""".stripMargin,
+                  Array(dt, user, ad)
+                )
+                if(l>=30){
+                  JDBCUtil.executeUpdate(
+                    connection,
+                    """
+                      |INSERT INTO black_list (userid) VALUES (?) ON DUPLICATE KEY update userid=?
+                      |""".stripMargin,
+                    Array(user,user)
+                  )
+                }
+              }
+            }
+            connection.close()
+          }
+        )
+      }
+    )
+
+
     //2 写出
     dateUserAdToCount.foreachRDD(
       rdd => {
