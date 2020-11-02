@@ -23,15 +23,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dc610adc-01a1-4e84-a49f-d23c92864ef8" name="Default Changelist" comment="sparkstreaming">
-      <change afterPath="$PROJECT_DIR$/../SparkStreaming_AD/.idea/libraries/mysql_connector_java_8_0_15.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SparkStreaming_AD/mysql-connector-java-8.0.15.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SparkStreaming_AD/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SparkStreaming_AD/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SparkStreaming_AD/src/main/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../SparkStreaming_AD/src/main/resources/config.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../SparkStreaming_AD/src/main/scala/app/BlackListHandler.scala" beforeDir="false" afterPath="$PROJECT_DIR$/../SparkStreaming_AD/src/main/scala/app/BlackListHandler.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SparkStreaming_AD/src/main/scala/util/JDBCUtil.scala" beforeDir="false" afterPath="$PROJECT_DIR$/../SparkStreaming_AD/src/main/scala/util/JDBCUtil.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SparkStreaming_AD/target/classes/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../SparkStreaming_AD/target/classes/config.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../log/agent.log" beforeDir="false" afterPath="$PROJECT_DIR$/../log/agent.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,7 +157,7 @@
       <workItem from="1604063778426" duration="29000" />
       <workItem from="1604063833021" duration="12270000" />
       <workItem from="1604121650921" duration="4356000" />
-      <workItem from="1604128769293" duration="21285000" />
+      <workItem from="1604128769293" duration="21883000" />
     </task>
     <task id="LOCAL-00001" summary="third commit">
       <created>1604112191158</created>
