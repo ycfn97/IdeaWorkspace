@@ -1,3 +1,4 @@
+import org.apache.kafka.clients.consumer
 import org.apache.kafka.clients.consumer.{ConsumerConfig, ConsumerRecord}
 import org.apache.kafka.common.serialization.StringDeserializer
 import org.apache.spark.{SPARK_BRANCH, SparkConf}
@@ -25,8 +26,16 @@ object SparkStreaming04_DirectAuto {
     val ssc = new StreamingContext(sparkConf, Seconds(3))
 
     //3.定义Kafka参数：kafka集群地址、消费者组名称、key序列化、value序列化
+//    val kafkaPara: Map[String, Object] = Map[String, Object](
+//      ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG -> "hadoop01:9092,hadoop02:9092,hadoop03:9092",
+//      ConsumerConfig.GROUP_ID_CONFIG -> "atguiguGroup",
+//      ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG -> "org.apache.kafka.common.serialization.StringDeserializer",
+//      ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG -> classOf[StringDeserializer]
+//    )
+
+    //3.定义Kafka参数：kafka集群地址、消费者组名称、key序列化、value序列化
     val kafkaPara: Map[String, Object] = Map[String, Object](
-      ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG -> "hadoop01:9092,hadoop02:9092,hadoop03:9092",
+      ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG -> "hadoop01:9092,hadoop002:9092,hadoop03:9092",
       ConsumerConfig.GROUP_ID_CONFIG -> "atguiguGroup",
       ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG -> "org.apache.kafka.common.serialization.StringDeserializer",
       ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG -> classOf[StringDeserializer]
@@ -39,6 +48,7 @@ object SparkStreaming04_DirectAuto {
 //      ConsumerStrategies.Subscribe[String, String](Set("testTopic"), kafkaPara)// 消费策略：（订阅多个主题，配置参数）
 //    )
 
+    //4.读取Kafka数据创建DStream
     val value: InputDStream[ConsumerRecord[String, String]] = KafkaUtils.createDirectStream[String, String](
       ssc,
       LocationStrategies.PreferConsistent,

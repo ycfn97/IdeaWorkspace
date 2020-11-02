@@ -1,3 +1,5 @@
+package DStream
+
 import org.apache.spark.SparkConf
 import org.apache.spark.rdd.RDD
 import org.apache.spark.streaming.dstream.{DStream, ReceiverInputDStream}
@@ -6,8 +8,8 @@ import org.apache.spark.streaming.{Seconds, StreamingContext}
 /**
  * Copyright(c) 2020-2021 sparrow All Rights Reserved
  * Project: SparkStreaming
- * Package: 
- * ClassName: SparkStreaming05_Transform 
+ * Package:
+ * ClassName: SparkStreaming05_Transform
  *
  * @author 18729 created on date: 2020/10/31 15:15
  * @version 1.0
@@ -18,7 +20,7 @@ object SparkStreaming05_Transform {
     //创建配置文件对象 注意：Streaming程序至少不能设置为local，至少需要2个线程
     val conf: SparkConf = new SparkConf().setAppName("Spark01_W").setMaster("local[*]")
     //创建Spark Streaming上下文环境对象
-    val ssc = new StreamingContext(conf,Seconds(3))
+    val ssc = new StreamingContext(conf, Seconds(3))
 
     val value: ReceiverInputDStream[String] = ssc.socketTextStream("hadoop01", 9999)
 
@@ -34,7 +36,7 @@ object SparkStreaming05_Transform {
 
         val words: RDD[String] = rdd.flatMap(_.split(" "))
 
-        val wordToOne: RDD[(String, Int)] = words.map(x=>{
+        val wordToOne: RDD[(String, Int)] = words.map(x => {
 
           // 在Executor端执行，和单词个数相同
           println("333333:" + Thread.currentThread().getName)
