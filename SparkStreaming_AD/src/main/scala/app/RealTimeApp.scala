@@ -38,6 +38,11 @@ object RealTimeApp {
 
     value2.cache()
     value2.count().print()
+
+    //7.需求二：统计每天各大区各个城市广告点击总数并保存至MySQL中
+    DateAreaCityAdCountHandler.saveDateAreaCityAdCountToMysql(value2)
+
+    LastHourAdCountHandler.getAdHourMintToCount(value2).print()
     //启动采集器
     ssc.start()
     //默认情况下，上下文对象不能关闭
