@@ -19,6 +19,10 @@ object BlackListHandler {
   //时间格式化对象
   private val sdf = new SimpleDateFormat("yyyy-MM-dd")
 
+//  第一步，获取日期格式
+//  第二步，定义添加黑名单函数
+//  第三步，
+
   def addBlackList(filterAdsLogDSteam: DStream[Ads_log]): Unit = {
     //统计当前批次中单日每个用户点击每个广告的总次数
     //1.转换和累加：ads_log=>((date,user,adid),1) =>((date,user,adid),count)
@@ -30,8 +34,6 @@ object BlackListHandler {
     //        ((date, adsLog.userid, adsLog.adid), 1L)
     //      }
     //    ).reduceByKey(_ + _)
-
-
     filterAdsLogDSteam.map(
       a => {
         val str: String = sdf.format(new Date(a.timestamp))
@@ -74,7 +76,6 @@ object BlackListHandler {
         )
       }
     )
-
 
     //    //2 写出
     //    dateUserAdToCount.foreachRDD(
@@ -120,6 +121,9 @@ object BlackListHandler {
     //      }
     //    )
   }
+
+//  过滤黑名单函数
+//  .filter(第一步，获得连接，第二步，如果连接成功，则执行选择函数，)
 
   // 判断用户是否在黑名单中
   def filterByBlackList(adsLogDStream: DStream[Ads_log]): DStream[Ads_log] = {

@@ -2,8 +2,6 @@ package app
 
 import java.sql.Date
 import java.text.SimpleDateFormat
-
-import org.apache.spark.streaming
 import org.apache.spark.streaming.Minutes
 import org.apache.spark.streaming.dstream.DStream
 /**
@@ -17,7 +15,6 @@ import org.apache.spark.streaming.dstream.DStream
  * @since JDK 1.8
  */
 object LastHourAdCountHandler {
-
   def getAdHourMintToCount(value2: DStream[Ads_log]):DStream[(String, List[(String, Long)])]={
     value2.window(Minutes(2)).map(
       a=>{

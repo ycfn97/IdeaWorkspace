@@ -25,6 +25,13 @@ object RealTimeApp {
     val ssc = new StreamingContext(conf,Seconds(3))
     val properties: Properties = util.PropertiesUtil.load("config.properties")
     val str: String = properties.getProperty("kafka.topic")
+
+//    第一步，创建sparkstreaming上下文环境对象
+//    第二步，加载kafka驱动，注册驱动文件
+//    疯转样例类
+//    过滤黑名单
+//
+
     val value: InputDStream[ConsumerRecord[String, String]] = util.MyKafkaUtil.getKafkaStream(str, ssc)
 
     val value1: DStream[Ads_log] = value.map(a => {
