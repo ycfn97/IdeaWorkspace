@@ -24,6 +24,7 @@
   <component name="ChangeListManager">
     <list default="true" id="dc610adc-01a1-4e84-a49f-d23c92864ef8" name="Default Changelist" comment="sparkstreaming">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SparkStreaming_AD/src/main/scala/app/BlackListHandler.scala" beforeDir="false" afterPath="$PROJECT_DIR$/../SparkStreaming_AD/src/main/scala/app/BlackListHandler.scala" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

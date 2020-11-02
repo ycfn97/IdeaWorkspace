@@ -4,7 +4,7 @@ import java.util.Properties
 
 import org.apache.kafka.clients.consumer.ConsumerRecord
 import org.apache.spark.SparkConf
-import org.apache.spark.streaming.dstream.InputDStream
+import org.apache.spark.streaming.dstream.{DStream, InputDStream}
 import org.apache.spark.streaming.{Seconds, StreamingContext}
 
 /**
@@ -27,10 +27,17 @@ object RealTimeApp {
     val str: String = properties.getProperty("kafka.topic")
     val value: InputDStream[ConsumerRecord[String, String]] = util.MyKafkaUtil.getKafkaStream(str, ssc)
 
-    value.map(a=>{
+    val value1: DStream[Ads_log] = value.map(a => {
       val strings: Array[String] = a.value().split(" ")
-      Ads_log(strings(0).toLong,strings(1),strings(2),strings(3),strings(4))
+      Ads_log(strings(0).toLong, strings(1), strings(2), strings(3), strings(4))
     })
+
+    val value2: DStream[Ads_log] = BlackListHandler.filterByBlackList(value1)
+
+    BlackListHandler.addBlackList(value2)
+
+    value2.cache()
+    value2.count().print()
     //启动采集器
     ssc.start()
     //默认情况下，上下文对象不能关闭
