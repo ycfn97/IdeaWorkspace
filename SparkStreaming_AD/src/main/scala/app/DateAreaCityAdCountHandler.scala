@@ -2,7 +2,6 @@ package app
 
 import java.sql.{Connection, Date}
 import java.text.SimpleDateFormat
-
 import org.apache.spark.streaming.dstream.DStream
 import util.JDBCUtil
 
