@@ -7,17 +7,19 @@ import org.apache.spark.SparkConf
 import org.apache.spark.streaming.dstream.{DStream, InputDStream}
 import org.apache.spark.streaming.{Seconds, StreamingContext}
 
+import scala.xml.dtd.ContentModelParser.value
+
 /**
  * Copyright(c) 2020-2021 sparrow All Rights Reserved
  * Project: SparkStreaming_AD
  * Package: app
- * ClassName: RealTimeApp 
+ * ClassName: RealTimeAPP01
  *
- * @author 18729 created on date: 2020/11/2 11:31
+ * @author 18729 created on date: 2020/11/3 8:42
  * @version 1.0
  * @since JDK 1.8
  */
-object RealTimeApp {
+object RealTimeAPP01 {
   def main(args: Array[String]): Unit = {
     //创建配置文件对象 注意：Streaming程序至少不能设置为local，至少需要2个线程
     val conf: SparkConf = new SparkConf().setAppName("Spark01_W").setMaster("local[*]")
@@ -25,30 +27,16 @@ object RealTimeApp {
     val ssc = new StreamingContext(conf,Seconds(3))
     val properties: Properties = util.PropertiesUtil.load("config.properties")
     val str: String = properties.getProperty("kafka.topic")
-
-//    第一步，创建sparkstreaming上下文环境对象
-//    第二步，加载kafka驱动，注册驱动文件
-//    疯转样例类
-//    过滤黑名单
-
-    val value: InputDStream[ConsumerRecord[String, String]] = util.MyKafkaUtil.getKafkaStream(str, ssc)
-
-    val value1: DStream[Ads_log] = value.map(a => {
-      val strings: Array[String] = a.value().split(" ")
-      Ads_log(strings(0).toLong, strings(1), strings(2), strings(3), strings(4))
+    val value1: InputDStream[ConsumerRecord[String, String]] = util.MyKafkaUtil.getKafkaStream(str, ssc)
+    val value2: DStream[Ads_log] = value1.map(a => {
+      var value = a.value().split(" ")
+      Ads_log(value(0).toLong, value(1), value(2), value(3), value(4))
     })
 
-    val value2: DStream[Ads_log] = BlackListHandler.filterByBlackList(value1)
+    val value3: DStream[Ads_log] = BlackListHandler.filterByBlackList(value2)
+    BlackListHandler.addBlackList(value3)
 
-    BlackListHandler.addBlackList(value2)
-
-    value2.cache()
-    value2.count().print()
-
-    //7.需求二：统计每天各大区各个城市广告点击总数并保存至MySQL中
-    DateAreaCityAdCountHandler.saveDateAreaCityAdCountToMysql(value2)
-
-    LastHourAdCountHandler.getAdHourMintToCount(value2).print()
+    
     //启动采集器
     ssc.start()
     //默认情况下，上下文对象不能关闭
@@ -60,4 +48,3 @@ object RealTimeApp {
 
 // 时间 地区 城市 用户id 广告id
 case class Ads_log(timestamp: Long, area: String, city: String, userid: String, adid: String)
-

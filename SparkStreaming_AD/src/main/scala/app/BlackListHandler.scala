@@ -100,7 +100,6 @@ object BlackListHandler {
                     |""".stripMargin,
                   Array(dt, user, ad, count, count)
                 )
-                println((dt,user,ad),count)
                 val l: Long = JDBCUtil.getDataFromMysql(
                   connection,
                   """
@@ -108,7 +107,6 @@ object BlackListHandler {
                     |""".stripMargin,
                   Array(dt, user, ad)
                 )
-                println(dt,user,ad)
                 if (l >= 30) {
                   JDBCUtil.executeUpdate(
                     connection,
