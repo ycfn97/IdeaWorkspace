@@ -1,26 +1,24 @@
 package uploader;
 
+import java.io.OutputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
 /**
  * Copyright(c) 2020-2021 sparrow All Rights Reserved
  * Project: gmall-2020
  * Package: utils
  * ClassName: LogUploader
- *
+ * LogUploader：通过http方法发送到采集系统的web端口
  * @author 18729 created on date: 2020/11/3 13:41
  * @version 1.0
  * @since JDK 1.8
  */
-import java.io.OutputStream;
-
-import java.net.HttpURLConnection;
-import java.net.URL;
-
 public class LogUploader {
 
     public static void sendLogStream(String log){
         try{
             //不同的日志类型对应不同的URL
-            URL url  =new URL("http://hadoop01/log");
+            URL url  =new URL("http://hadoop01:8090/log");
 
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 
