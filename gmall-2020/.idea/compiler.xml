@@ -7,11 +7,17 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="gmall-realtime" />
-        <module name="gmall-logger" />
-        <module name="gmall-common" />
         <module name="gmall-mocker" />
+        <module name="gmall-canal" />
+        <module name="gmall-logger" />
+        <module name="dw-chart" />
+        <module name="gmall-publisher" />
+        <module name="gmall-common" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="dw-canal" target="8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">

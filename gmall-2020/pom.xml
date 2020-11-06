@@ -25,6 +25,10 @@
         <module>gmall-mocker</module>
         <module>gmall-logger</module>
         <module>gmall-realtime</module>
+        <module>gmall-publisher</module>
+        <module>dw-chart</module>
+<!--        <module>dw-canal</module>-->
+        <module>gmall-canal</module>
     </modules>
 
 
