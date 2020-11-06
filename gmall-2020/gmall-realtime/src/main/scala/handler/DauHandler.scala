@@ -16,13 +16,10 @@ import org.apache.spark.streaming.dstream.DStream
 object DauHandler {
 
   def filterByMid(filterdByRedis: DStream[StartUpLog]): DStream[StartUpLog] = {
-
     //1.转换数据结构 log ==> (mid_logDate,log)
     val midDateToLogDStream: DStream[((String, String), StartUpLog)] = filterdByRedis.map(log => ((log.mid, log.logDate), log))
-
     //2.按照Key分组
     val midDateToLogIterDStream: DStream[((String, String), Iterable[StartUpLog])] = midDateToLogDStream.groupByKey()
-
     //KV结构数据:   是否需要Key,数据是否需要压平
     //map            不需要Key,不需要压平
     //mapValues        需要Key,不需要压平
@@ -34,11 +31,9 @@ object DauHandler {
     //    })
     //4.将集合压平
     //    midDateToLogListDStream.flatMap(_._2)
-
     midDateToLogIterDStream.flatMap { case ((mid, date), iter) =>
       iter.toList.sortWith(_.ts < _.ts).take(1)
     }
-
   }
 
 
@@ -70,9 +65,9 @@ object DauHandler {
         )
       }
     }
-
     value
   }
+
 
   def saveMidToRedis(value1: DStream[StartUpLog]) = {
     value1.foreachRDD(

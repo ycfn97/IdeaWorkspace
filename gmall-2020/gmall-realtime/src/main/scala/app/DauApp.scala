@@ -6,7 +6,6 @@ import java.text.SimpleDateFormat
 import bean.StartUpLog
 import com.alibaba.fastjson.JSON
 import constant.GmallConstants
-import handler.DauHandler
 import org.apache.hadoop.hbase.HBaseConfiguration
 import org.apache.kafka.clients.consumer.ConsumerRecord
 import org.apache.phoenix.spark.toProductRDDFunctions
