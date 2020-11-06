@@ -35,7 +35,7 @@ object SparkStreaming04_DirectAuto {
 
     //3.定义Kafka参数：kafka集群地址、消费者组名称、key序列化、value序列化
     val kafkaPara: Map[String, Object] = Map[String, Object](
-      ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG -> "hadoop01:9092,hadoop002:9092,hadoop03:9092",
+      ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG -> "hadoop01:9092,hadoop02:9092,hadoop03:9092",
       ConsumerConfig.GROUP_ID_CONFIG -> "atguiguGroup",
       ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG -> "org.apache.kafka.common.serialization.StringDeserializer",
       ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG -> classOf[StringDeserializer]
