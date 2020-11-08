@@ -71,19 +71,14 @@ public class CanalClient {
      * @param rowDatasList 数据集合
      */
     private static void handler(String tableName, CanalEntry.EventType eventType, List<CanalEntry.RowData> rowDatasList) {
-
         //对于订单表而言,只需要新增数据
-        if ("user_info".equals(tableName) && CanalEntry.EventType.INSERT.equals(eventType)) {
-
+        if ("order_info".equals(tableName) && CanalEntry.EventType.INSERT.equals(eventType)) {
             for (CanalEntry.RowData rowData : rowDatasList) {
-
                 //创建JSON对象,用于存放多个列的数据
                 JSONObject jsonObject = new JSONObject();
-
                 for (CanalEntry.Column column : rowData.getAfterColumnsList()) {
                     jsonObject.put(column.getName(), column.getValue());
                 }
-
                 System.out.println(jsonObject.toString());
                 //发送数据至Kafka
                 MyKafkaSender.send(constant.GmallConstants.GMALL_ORDER_INFO, jsonObject.toString());

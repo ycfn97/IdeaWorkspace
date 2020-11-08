@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 
@@ -27,6 +28,7 @@ public class PublisherController {
 
         //2.获取新增日活
         Integer dauTotal = publisherService.getDauTotal(date);
+        Double orderAmount = publisherService.getOrderAmount(date);
 
         //3.封装新增日活的Map
         HashMap<String, Object> dauMap = new HashMap<>();
@@ -40,9 +42,17 @@ public class PublisherController {
         newMidMap.put("name", "新增设备");
         newMidMap.put("value", 233);
 
+        //5.封装新增设备的Map
+        HashMap<String, Object> gmvMap = new HashMap<>();
+        gmvMap.put("id", "order_amount");
+        gmvMap.put("name", "新增交易额");
+        gmvMap.put("value", orderAmount);
+
+
         //5.将两个Map放入List
         result.add(dauMap);
         result.add(newMidMap);
+        result.add(gmvMap);
 
         //将result转换为字符串输出
         return JSONObject.toJSONString(result);
@@ -53,15 +63,26 @@ public class PublisherController {
     public String getDauTotalHourMap(@RequestParam("id") String id,
                                      @RequestParam("date") String date) {
 
-        //1.获取当天的日活分时数据
-        Map todayMap = publisherService.getDauTotalHourMap(date);
+        //1.创建Map用于存放结果数据
+        HashMap<String, Map> result = new HashMap<>();
 
         //2.获取昨天的日活分时数据
         String yesterday = LocalDate.parse(date).plusDays(-1).toString();
-        Map yesterdayMap = publisherService.getDauTotalHourMap(yesterday);
+        //3.声明存放昨天和今天数据的Map
+        Map todayMap = null;
+        Map yesterdayMap = null;
 
-        //3.创建Map用于存放结果数据
-        HashMap<String, Map> result = new HashMap<>();
+        if ("dau".equals(id)) {
+            //a.获取当天的日活分时数据
+            todayMap = publisherService.getDauTotalHourMap(date);
+            //b.获取昨天的日活分时数据
+            yesterdayMap = publisherService.getDauTotalHourMap(yesterday);
+        } else if ("order_amount".equals(id)) {
+            //a.获取当天的交易额分时数据
+            todayMap = publisherService.getOrderAmountHour(date);
+            //b.获取昨天天的交易额分时数据
+            yesterdayMap = publisherService.getOrderAmountHour(yesterday);
+        }
 
         //4.将两个Map放入result
         result.put("yesterday", yesterdayMap);
