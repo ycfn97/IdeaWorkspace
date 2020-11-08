@@ -26,9 +26,7 @@ object GmvApp {
     val conf: SparkConf = new SparkConf().setAppName("Spark01_W").setMaster("local[*]")
     //创建Spark Streaming上下文环境对象
     val ssc = new StreamingContext(conf, Seconds(5))
-
     val value: InputDStream[ConsumerRecord[String, String]] = utils.MyKafkaUtil.getKafkaStream(GmallConstants.GMALL_ORDER_INFO, ssc)
-
     val value2: DStream[OrderInfo] = value.map(
       a => {
         val value1 = JSON.parseObject(a.value(), classOf[OrderInfo])
@@ -36,17 +34,17 @@ object GmvApp {
         value1.create_date = strings(0)
         val strings1: Array[String] = strings(1).split(":")
         value1.create_hour = strings1(0)
-        value1.consignee_tel = value1.consignee_tel.splitAt(4)._1+"******"
+        value1.consignee_tel = value1.consignee_tel.splitAt(4)._1 + "******"
         println(a.value())
         value1
       }
     )
 
     value2.foreachRDD(
-      a=>{
+      a => {
         println("aaaaaaaaaaaaa")
-        a.saveToPhoenix("GMALL2020_ORDER_INFO",classOf[OrderInfo].getDeclaredFields.map(_.getName.toUpperCase())
-        ,HBaseConfiguration.create(),Some("hadoop01,hadoop02,hadoop03:2181"))
+        a.saveToPhoenix("GMALL2020_ORDER_INFO", classOf[OrderInfo].getDeclaredFields.map(_.getName.toUpperCase())
+          , HBaseConfiguration.create(), Some("hadoop01,hadoop02,hadoop03:2181"))
       }
     )
     //启动采集器

@@ -14,7 +14,6 @@ import org.apache.spark.streaming.dstream.DStream
  * @since JDK 1.8
  */
 object DauHandler {
-
   def filterByMid(filterdByRedis: DStream[StartUpLog]): DStream[StartUpLog] = {
     //1.转换数据结构 log ==> (mid_logDate,log)
     val midDateToLogDStream: DStream[((String, String), StartUpLog)] = filterdByRedis.map(log => ((log.mid, log.logDate), log))
@@ -36,7 +35,11 @@ object DauHandler {
     }
   }
 
-
+  /**
+   * value.filter{a=>{获得redis连接，然后遍历并去重（此处为跨批次去重）}}
+   * @param value1
+   * @return
+   */
   def filterByRedis(value1: DStream[StartUpLog]) = {
     val value2 = value1.filter(
       a => {
@@ -48,6 +51,9 @@ object DauHandler {
       }
     )
 
+    /**
+     * value.transform{a=>{转为rdd后a.mappartitions{}}}
+     */
     val value = value1.transform {
       a => {
         a.mapPartitions(
@@ -68,15 +74,16 @@ object DauHandler {
     value
   }
 
-
+  //去重后的数据写入redis
+  //  value.foreachRDD{a=>{首先获得redis连接，a.foreach{遍历写库，rediskey用日期}，最后归还连接}}
   def saveMidToRedis(value1: DStream[StartUpLog]) = {
     value1.foreachRDD(
-      a=>{
+      a => {
         a.foreachPartition(
-          a=>{
+          a => {
             val client = utils.RedisUtil.getJedisClient
             a.foreach(
-              a=>{
+              a => {
                 val value = s"DAU:${a.logDate}"
                 client.sadd(value, a.mid)
               }
@@ -87,5 +94,4 @@ object DauHandler {
       }
     )
   }
-
 }

@@ -28,10 +28,11 @@ object DauApp {
     //创建配置文件对象 注意：Streaming程序至少不能设置为local，至少需要2个线程
     val conf: SparkConf = new SparkConf().setAppName("Spark01_W").setMaster("local[*]")
     //创建Spark Streaming上下文环境对象
-    val ssc = new StreamingContext(conf,Seconds(10))
+    val ssc = new StreamingContext(conf,Seconds(5))
 
     val value: InputDStream[ConsumerRecord[String, String]] = utils.MyKafkaUtil.getKafkaStream(GmallConstants.KAFKA_TOPIC_STARTUP, ssc)
-
+//    kafka中数据是有key的，我们将值放在value中，并取出放到样例类中
+//    value.map(_.value()).map{a=>{将json串封装进样例类，然后进一步取出需要的数据}}
     val format: SimpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH")
     val value1: DStream[StartUpLog] = value.map(_.value()).map {
       a => {
@@ -44,6 +45,7 @@ object DauApp {
       }
     }
 
+//
     val value2 = handler.DauHandler.filterByRedis(value1)
 
     val filterdByMid: DStream[StartUpLog] = handler.DauHandler.filterByMid(value2)
