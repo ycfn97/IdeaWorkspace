@@ -1,5 +1,6 @@
 package com.atguigu.gmallpublisher.service;
 
+import java.util.List;
 import java.util.Map;
 
 public interface PublisherService {
@@ -12,5 +13,7 @@ public interface PublisherService {
 
     public Map getOrderAmountHour(String date);
 
+    Integer getDeviceTotal(String date);
 
+    public List<Map> selectDeviceTotalHourMap(String date);
 }

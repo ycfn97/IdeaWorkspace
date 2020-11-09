@@ -28,6 +28,7 @@ public class PublisherController {
 
         //2.获取新增日活
         Integer dauTotal = publisherService.getDauTotal(date);
+        Integer deviceTotal = publisherService.getDeviceTotal(date);
         Double orderAmount = publisherService.getOrderAmount(date);
 
         //3.封装新增日活的Map
@@ -40,14 +41,13 @@ public class PublisherController {
         HashMap<String, Object> newMidMap = new HashMap<>();
         newMidMap.put("id", "new_mid");
         newMidMap.put("name", "新增设备");
-        newMidMap.put("value", 233);
+        newMidMap.put("value", deviceTotal);
 
         //5.封装新增设备的Map
         HashMap<String, Object> gmvMap = new HashMap<>();
         gmvMap.put("id", "order_amount");
         gmvMap.put("name", "新增交易额");
         gmvMap.put("value", orderAmount);
-
 
         //5.将两个Map放入List
         result.add(dauMap);

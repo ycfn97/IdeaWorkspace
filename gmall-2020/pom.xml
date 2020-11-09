@@ -29,6 +29,7 @@
         <module>dw-chart</module>
 <!--        <module>dw-canal</module>-->
         <module>gmall-canal</module>
+        <module>gmall-es</module>
     </modules>
 
 
