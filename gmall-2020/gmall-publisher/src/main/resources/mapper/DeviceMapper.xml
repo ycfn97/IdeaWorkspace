@@ -3,7 +3,7 @@
 <mapper namespace="com.atguigu.gmallpublisher.mapper.DeviceMapper">
 
     <select id="selectDeviceTotal" resultType="Integer">
-        select count(*) from GMALL2020_DAU where logdate=#{date}
+select count(*) from GMALL2020_DAU left join (select mid from GMALL2020_DAU where LOGDATE=#{date}) t1 on t1.mid =GMALL2020_DAU.mid where t1.mid is null
     </select>
 
     <select id="selectDauTotalHourMap" resultMap="dauTotalHour">

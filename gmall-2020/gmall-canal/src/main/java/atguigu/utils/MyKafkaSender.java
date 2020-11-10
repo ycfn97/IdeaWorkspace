@@ -4,12 +4,8 @@ import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerRecord;
 
 import java.util.Properties;
-
 public class MyKafkaSender {
-
     public static KafkaProducer<String, String> kafkaProducer = null;
-
-
     public static KafkaProducer<String, String> createKafkaProducer() {
         Properties properties = new Properties();
         properties.put("bootstrap.servers", "hadoop01:9092,hadoop02:9092,hadoop03:9092");
@@ -23,7 +19,6 @@ public class MyKafkaSender {
         }
         return producer;
     }
-
     public static void send(String topic, String msg) {
         if (kafkaProducer == null) {
             kafkaProducer = createKafkaProducer();

@@ -8,7 +8,7 @@ import com.alibaba.otter.canal.protocol.CanalEntry;
 import com.alibaba.otter.canal.protocol.Message;
 import com.google.protobuf.ByteString;
 import com.google.protobuf.InvalidProtocolBufferException;
-
+import constant.GmallConstants;
 import java.net.InetSocketAddress;
 import java.util.List;
 
@@ -43,7 +43,7 @@ public class CanalClient {
                 for (CanalEntry.Entry entry : entries) {
                     //获取Entry类型
                     CanalEntry.EntryType entryType = entry.getEntryType();
-                    //判断,只去RowData类型
+                    //判断,只取RowData类型
                     if (CanalEntry.EntryType.ROWDATA.equals(entryType)) {
                         //获取表名
                         String tableName = entry.getHeader().getTableName();
@@ -73,16 +73,24 @@ public class CanalClient {
     private static void handler(String tableName, CanalEntry.EventType eventType, List<CanalEntry.RowData> rowDatasList) {
         //对于订单表而言,只需要新增数据
         if ("order_info".equals(tableName) && CanalEntry.EventType.INSERT.equals(eventType)) {
-            for (CanalEntry.RowData rowData : rowDatasList) {
-                //创建JSON对象,用于存放多个列的数据
-                JSONObject jsonObject = new JSONObject();
-                for (CanalEntry.Column column : rowData.getAfterColumnsList()) {
-                    jsonObject.put(column.getName(), column.getValue());
-                }
-                System.out.println(jsonObject.toString());
-                //发送数据至Kafka
-                MyKafkaSender.send(constant.GmallConstants.GMALL_ORDER_INFO, jsonObject.toString());
+            sendToKafka(rowDatasList, GmallConstants.GMALL_ORDER_INFO);
+        } else if ("order_detail".equals(tableName) && CanalEntry.EventType.INSERT.equals(eventType)) {
+            sendToKafka(rowDatasList, GmallConstants.GMALL_ORDER_DETAIL);
+        } else if ("user_info".equals(tableName) && CanalEntry.EventType.INSERT.equals(eventType)) {
+            sendToKafka(rowDatasList, GmallConstants.GMALL_USER_INFO);
+        }
+    }
+
+    private static void sendToKafka(List<CanalEntry.RowData> rowDatasList, String gmallOrderInfo) {
+        for (CanalEntry.RowData rowData : rowDatasList) {
+            //创建JSON对象,用于存放多个列的数据
+            JSONObject jsonObject = new JSONObject();
+            for (CanalEntry.Column column : rowData.getAfterColumnsList()) {
+                jsonObject.put(column.getName(), column.getValue());
             }
+            System.out.println(jsonObject.toString());
+            //发送数据至Kafka
+            MyKafkaSender.send(gmallOrderInfo, jsonObject.toString());
         }
     }
 }
