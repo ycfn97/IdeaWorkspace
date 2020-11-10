@@ -29,7 +29,7 @@ object SaleDetalApp {
     val value = utils.MyKafkaUtil.getKafkaStream(GmallConstants.GMALL_ORDER_DETAIL, ssc)
     val value1 = utils.MyKafkaUtil.getKafkaStream(GmallConstants.GMALL_ORDER_INFO, ssc)
 
-    val value2: DStream[(String, OrderInfo)] = value1.map {
+    val info: DStream[(String, OrderInfo)] = value1.map {
       a => {
         val orderInfo = JSON.parseObject(a.value(), classOf[OrderInfo])
         //b.取出创建时间 yyyy-MM-dd HH:mm:ss
@@ -47,7 +47,7 @@ object SaleDetalApp {
       }
     }
 
-    val value3: DStream[(String, OrderDetail)] = value.map {
+    val detal: DStream[(String, OrderDetail)] = value.map {
       a => {
         val detail = JSON.parseObject(a.value(), classOf[OrderDetail])
         (detail.order_id, detail)
