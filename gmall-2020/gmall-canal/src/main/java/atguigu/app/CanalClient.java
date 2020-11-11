@@ -11,6 +11,7 @@ import com.google.protobuf.InvalidProtocolBufferException;
 import constant.GmallConstants;
 import java.net.InetSocketAddress;
 import java.util.List;
+import java.util.Random;
 
 public class CanalClient {
 
@@ -89,6 +90,12 @@ public class CanalClient {
                 jsonObject.put(column.getName(), column.getValue());
             }
             System.out.println(jsonObject.toString());
+
+            try {
+                Thread.sleep(new Random().nextInt(5) * 1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
             //发送数据至Kafka
             MyKafkaSender.send(gmallOrderInfo, jsonObject.toString());
         }

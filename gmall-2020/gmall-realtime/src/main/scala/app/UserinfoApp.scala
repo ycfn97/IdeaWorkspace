@@ -29,9 +29,9 @@ object UserinfoApp {
 
 
     //打印测试
-//    kafkaDStream.foreachRDD(rdd => {
-//      rdd.foreach(record => println(record.value()))
-//    })
+    kafkaDStream.foreachRDD(rdd => {
+      rdd.foreach(record => println(record.value()))
+    })
     //启动采集器
     ssc.start()
     //默认情况下，上下文对象不能关闭

@@ -54,6 +54,10 @@ object SaleDetalApp {
       }
     }
 
+    //双流JOIN(普通JOIN)
+    val value2: DStream[(String, (OrderInfo, OrderDetail))] = info.join(detal)
+        value2.print(100)
+
     //测试
 //        value.foreachRDD(rdd=>{
 //          rdd.foreach(record=>println(record.value()))
