@@ -20,6 +20,7 @@ public class GmallConstants {
     public static final String GMALL_USER_INFO="TOPIC_USERR_INFO";
 
     public static final String ES_ALERT_INDEX_PRE="gmall_coupon_alert";
+    public static final String ES_SALE_DETAIL_INDEX_PRE = "gmall2020_sale_detail";
 
     public static final String KAFKA_TOPIC_NEW_ORDER="GMALL_NEW_ORDER";
 

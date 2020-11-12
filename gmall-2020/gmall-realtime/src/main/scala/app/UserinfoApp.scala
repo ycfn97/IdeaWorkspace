@@ -1,9 +1,12 @@
 package app
 
+import bean.UserInfo
+import com.alibaba.fastjson.JSON
 import constant.GmallConstants
+import org.apache.hadoop.io.serializer.Serialization
 import org.apache.kafka.clients.consumer.ConsumerRecord
 import org.apache.spark.SparkConf
-import org.apache.spark.streaming.dstream.InputDStream
+import org.apache.spark.streaming.dstream.{DStream, InputDStream}
 import org.apache.spark.streaming.{Seconds, StreamingContext}
 import utils.MyKafkaUtil
 
@@ -11,7 +14,7 @@ import utils.MyKafkaUtil
  * Copyright(c) 2020-2021 sparrow All Rights Reserved
  * Project: gmall-2020
  * Package: app
- * ClassName: UserinfoApp 
+ * ClassName: UserinfoApp
  * 将用户新增及变化数据缓存进redis
  * @author 18729 created on date: 2020/11/10 19:35
  * @version 1.0
@@ -27,11 +30,30 @@ object UserinfoApp {
     //3.消费Kafka用户主题数据创建流
     val kafkaDStream: InputDStream[ConsumerRecord[String, String]] = MyKafkaUtil.getKafkaStream(GmallConstants.GMALL_USER_INFO, ssc)
 
+    val value: DStream[String] = kafkaDStream.map(_.value())
 
+//    写入redis条件反射
+    value.foreachRDD(
+      a=>{
+        a.foreachPartition{
+          a=>{
+            val client = utils.RedisUtil.getJedisClient
+            a.foreach(
+              a=>{
+                val info: UserInfo = JSON.parseObject(a, classOf[UserInfo])
+                val value1: String = s"UserInfo:${info}"
+                client.sadd(value1, a)
+              }
+            )
+            client.close()
+          }
+        }
+      }
+    )
     //打印测试
-    kafkaDStream.foreachRDD(rdd => {
-      rdd.foreach(record => println(record.value()))
-    })
+//    kafkaDStream.foreachRDD(rdd => {
+//      rdd.foreach(record => println(record.value()))
+//    })
     //启动采集器
     ssc.start()
     //默认情况下，上下文对象不能关闭

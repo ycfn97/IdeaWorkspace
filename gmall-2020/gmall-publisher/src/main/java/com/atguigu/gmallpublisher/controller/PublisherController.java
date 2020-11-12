@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.io.IOException;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -26,7 +27,7 @@ public class PublisherController {
         //1.创建集合用于存放结果数据
         ArrayList<Map> result = new ArrayList<>();
 
-        //2.获取新增日活
+        //2.获取新增日活sale_detail
         Integer dauTotal = publisherService.getDauTotal(date);
         Integer deviceTotal = publisherService.getDeviceTotal(date);
         Double orderAmount = publisherService.getOrderAmount(date);
@@ -83,13 +84,18 @@ public class PublisherController {
             //b.获取昨天天的交易额分时数据
             yesterdayMap = publisherService.getOrderAmountHour(yesterday);
         }
-
         //4.将两个Map放入result
         result.put("yesterday", yesterdayMap);
         result.put("today", todayMap);
-
         //5.返回结果
         return JSONObject.toJSONString(result);
     }
 
+    @RequestMapping("sale_detail")
+    public String getSaleDetail(@RequestParam("date") String date,
+                                @RequestParam("startpage") int startpage,
+                                @RequestParam("size") int size,
+                                @RequestParam("keyword") String keyword) throws IOException {
+        return publisherService.getSaleDetail(date, startpage, size, keyword);
+    }
 }
