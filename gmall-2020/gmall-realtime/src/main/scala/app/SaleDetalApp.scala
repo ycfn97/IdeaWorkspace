@@ -2,6 +2,8 @@ package app
 
 import java.sql.{Connection, Date}
 import java.text.SimpleDateFormat
+import java.util
+
 import bean.{OrderDetail, OrderInfo, SaleDetail, UserInfo}
 import com.alibaba.fastjson.JSON
 import constant.GmallConstants
@@ -10,6 +12,7 @@ import org.apache.spark.streaming.dstream.DStream
 import org.apache.spark.streaming.{Seconds, StreamingContext}
 import redis.clients.jedis.Jedis
 import utils.JdbcUtil
+
 import scala.collection.JavaConverters.asScalaSetConverter
 import scala.collection.mutable.ListBuffer
 
@@ -58,6 +61,39 @@ object SaleDetalApp {
 
     val value2: DStream[(String, (Option[OrderInfo], Option[OrderDetail]))] = info.fullOuterJoin(detal)
 
+//    value2.mapPartitions(
+//      a=>{
+//        val client: Jedis = utils.RedisUtil.getJedisClient
+//        val details: ListBuffer[SaleDetail] = new ListBuffer[SaleDetail]
+//        a.foreach{
+//          case (orderid,(orderinfo,orderDetail))=>{
+//            val value3: String = s"orderinfo:${orderid}"
+//            val value4: String = s"orderdetail:${orderid}"
+//            if (orderinfo.isDefined){
+//              val value5: OrderInfo = orderinfo.get
+//              if (orderDetail.isDefined){
+//                val value6: OrderDetail = orderDetail.get
+//                val detail: SaleDetail = new SaleDetail(value5, value6)
+//                details+=detail
+//              }
+//              import org.json4s.native.Serialization
+//              implicit val formats = org.json4s.DefaultFormats
+//              val str: String = Serialization.write(orderinfo)
+//              client.set(value3,str)
+//              client.expire(value3,100)
+//
+//              val strings: util.Set[String] = client.smembers(value4)
+//              strings.asScala.foreach(
+//                a=>{
+//
+//                }
+//              )
+//            }
+//          }
+//        }
+//    }
+//    )
+
     val value6: DStream[SaleDetail] = value2.mapPartitions(
       a => {
         val client = utils.RedisUtil.getJedisClient
@@ -65,7 +101,7 @@ object SaleDetalApp {
         a.foreach {
           case (orderid, (orderinfo, orderdetail)) => {
             val infoRedisKey = s"OrderInfo:$orderid"
-            val detailRedisKey = s"OrderDetail$orderid"
+            val detailRedisKey = s"OrderDetail:$orderid"
             if (orderinfo.isDefined) {
               val value3 = orderinfo.get
               if (orderdetail.isDefined) {
@@ -73,14 +109,14 @@ object SaleDetalApp {
                 val detail = new SaleDetail(value3, value4)
                 details += detail
               }
-              //              如果info没有匹配到合适的detail数据，则将info写入缓存
+              // 将info数据写入redis,给后续的detail数据使用
               import org.json4s.native.Serialization
               implicit val formats = org.json4s.DefaultFormats
               val orderInfoJson: String = Serialization.write(orderinfo)
               client.set(infoRedisKey, orderInfoJson)
               client.expire(infoRedisKey, 100)
 
-              val strings = client.smembers(detailRedisKey)
+              val strings: util.Set[String] = client.smembers(detailRedisKey)
               strings.asScala.foreach(
                 a => {
                   val detail = JSON.parseObject(a, classOf[OrderDetail])
@@ -110,15 +146,26 @@ object SaleDetalApp {
 
 //    value6.print(100)
 
+    value6.mapPartitions(
+      a=>{
+        val client: Jedis = utils.RedisUtil.getJedisClient
+        a.map(
+          a=>{
+            s""
+          }
+        )
+      }
+    )
+
     val value3: DStream[SaleDetail] = value6.mapPartitions(
       a => {
         val client: Jedis = utils.RedisUtil.getJedisClient
         val details = a.map {
           a => {
-            val str: String = s"UserInfo${a.user_id}"
+            val str: String = s"UserInfo:${a.user_id}"
             if (client.exists(str)) {
               val str1 = client.get(str)
-              val info1: UserInfo = JSON.parseObject(str, classOf[UserInfo])
+              val info1: UserInfo = JSON.parseObject(str1, classOf[UserInfo])
               a.mergeUserInfo(info1)
             } else {
               val connection: Connection = utils.JdbcUtil.getConnection

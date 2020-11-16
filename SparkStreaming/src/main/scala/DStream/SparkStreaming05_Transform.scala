@@ -29,30 +29,21 @@ object SparkStreaming05_Transform {
 
     //4 转换为RDD操作
     val wordToSumDStream: DStream[(String, Int)] = value.transform(
-
       rdd => {
         // 在Driver端执行(ctrl+n JobGenerator)，一个批次一次
         println("222222:" + Thread.currentThread().getName)
-
         val words: RDD[String] = rdd.flatMap(_.split(" "))
-
         val wordToOne: RDD[(String, Int)] = words.map(x => {
-
           // 在Executor端执行，和单词个数相同
           println("333333:" + Thread.currentThread().getName)
-
           (x, 1)
         })
-
         val value: RDD[(String, Int)] = wordToOne.reduceByKey(_ + _)
-
         value
       }
     )
-
     //5 打印
     wordToSumDStream.print
-
     //启动采集器
     ssc.start()
     //默认情况下，上下文对象不能关闭

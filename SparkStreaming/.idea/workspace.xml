@@ -23,12 +23,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dc610adc-01a1-4e84-a49f-d23c92864ef8" name="Default Changelist" comment="sparkstreaming">
-      <change afterPath="$PROJECT_DIR$/../gmall-2020/gmall-realtime/src/main/scala/app/DauApp.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../gmall-2020/gmall-realtime/src/main/scala/app/RealtimeStartupApp.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../gmall-2020/gmall-realtime/src/main/scala/bean/StartUpLog.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FlinkTutorial/.idea/libraries/flink_streaming_scala_2_12_1_11_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FlinkTutorial/flink-streaming-scala_2.12-1.11.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FlinkTutorial/input/hello.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FlinkTutorial/src/main/scala/StreamWordCount.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FlinkTutorial/src/main/scala/WordCount.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/SparkStreaming04_DirectAuto.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/SparkStreaming04_DirectAuto.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/CustomerReceiver.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/CustomerReceiver.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/DStream/SparkStreaming05_Transform.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/DStream/SparkStreaming05_Transform.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/SparkStreaming10_output.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/SparkStreaming10_output.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../gmall-200621" beforeDir="false" afterPath="$PROJECT_DIR$/../gmall-200621" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gmall-2020/gmall-publisher/src/main/java/com/atguigu/gmallpublisher/service/impl/PublisherServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gmall-2020/gmall-publisher/src/main/java/com/atguigu/gmallpublisher/service/impl/PublisherServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gmall-2020/gmall-realtime/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../gmall-2020/gmall-realtime/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gmall-2020/gmall-realtime/src/main/scala/app/SaleDetalApp.scala" beforeDir="false" afterPath="$PROJECT_DIR$/../gmall-2020/gmall-realtime/src/main/scala/app/SaleDetalApp.scala" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,6 +171,8 @@
       <workItem from="1604128769293" duration="21883000" />
       <workItem from="1604473222769" duration="1093000" />
       <workItem from="1604486581164" duration="5118000" />
+      <workItem from="1605187280050" duration="1685000" />
+      <workItem from="1605254202183" duration="1180000" />
     </task>
     <task id="LOCAL-00001" summary="third commit">
       <created>1604112191158</created>

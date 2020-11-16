@@ -36,7 +36,6 @@ object SparkStreaming10_output {
         rdd.foreachPartition(
           //5.1 测试代码
           iter=>iter.foreach(println)
-
           //5.2 企业代码
           //5.2.1 获取连接
           //5.2.2 操作数据，使用连接写库
