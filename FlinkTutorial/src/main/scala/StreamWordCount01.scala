@@ -1,16 +1,17 @@
 import org.apache.flink.api.java.utils.ParameterTool
 import org.apache.flink.streaming.api.scala.{DataStream, StreamExecutionEnvironment}
+
 /**
  * Copyright(c) 2020-2021 sparrow All Rights Reserved
  * Project: FlinkTutorial
  * Package: 
- * ClassName: StreamWordCount 
+ * ClassName: StreamWordCount01 
  *
- * @author 18729 created on date: 2020/11/13 15:11
+ * @author 18729 created on date: 2020/11/19 14:34
  * @version 1.0
  * @since JDK 1.8
  */
-object StreamWordCount {
+object StreamWordCount01 {
   def main(args: Array[String]): Unit = {
     val tool: ParameterTool = ParameterTool.fromArgs(args)
     val str: String = tool.get("host")

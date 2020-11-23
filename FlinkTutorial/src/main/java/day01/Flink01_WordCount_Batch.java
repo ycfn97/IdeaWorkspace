@@ -1,3 +1,5 @@
+package day01;
+
 import org.apache.flink.api.java.ExecutionEnvironment;
 import org.apache.flink.api.java.operators.DataSource;
 

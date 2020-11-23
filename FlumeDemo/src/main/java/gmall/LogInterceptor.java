@@ -5,8 +5,6 @@ import com.alibaba.fastjson.JSONException;
 import org.apache.flume.Context;
 import org.apache.flume.Event;
 import org.apache.flume.interceptor.Interceptor;
-
-
 import java.nio.charset.StandardCharsets;
 import java.util.Iterator;
 import java.util.List;
@@ -14,17 +12,13 @@ import java.util.List;
 public class LogInterceptor implements Interceptor {
     @Override
     public void initialize() {
-
     }
 
     @Override
     public Event intercept(Event event) {
-
         Event resultEvent = etl(event);
-
         return resultEvent;
     }
-
     private Event etl(Event event) {
         // String body = new String(event.getBody(), Charset.forName("utf-8"));
         String body = new String(event.getBody(), StandardCharsets.UTF_8);
@@ -33,7 +27,6 @@ public class LogInterceptor implements Interceptor {
         }catch (JSONException e){
             return null ;
         }
-
         return event ;
     }
 
@@ -47,7 +40,6 @@ public class LogInterceptor implements Interceptor {
                 it.remove();
             }
         }
-
         return events ;
     }
 
@@ -56,20 +48,15 @@ public class LogInterceptor implements Interceptor {
 
     }
 
-
     public static class Builder implements Interceptor.Builder{
-
         @Override
         public Interceptor build() {
             return new LogInterceptor();
         }
-
         @Override
         public void configure(Context context) {
-
         }
     }
-
 }
 
 
